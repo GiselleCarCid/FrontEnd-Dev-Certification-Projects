@@ -1,0 +1,86 @@
+body{
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+    width: 100%;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    margin: auto;
+    background-image:url('https://images.unsplash.com/photo-1539724728401-4337be9859ba?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #f5f6f7;
+}
+
+h1, p{
+    margin: 1em auto;
+    text-align: center;
+    font-family:Georgia, serif;
+    font-size: 20px;
+}
+
+p{
+    color:#0BF2A5;
+}
+
+form{
+    background-color:rgba(241, 49, 94, 0.5); /* Un fondo rosa con 50% de opacidad */
+    width:100%; /* Hace que el formulario ocupe el 100% del ancho disponible */
+    max-width: 700px; /* Establece un ancho máximo para el formulario */
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 2em 2em;
+    font-family:"Gill Sans", sans-serif;
+    font-size: 18px;
+    border-radius: 1em; /* Añade esquinas redondeadas para un aspecto más suave */
+    overflow: hidden; /* Evita que el contenido desborde el formulario */
+}
+
+fieldset{
+    border: none;
+    padding: auto;
+    border-bottom: 3px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+input,
+textarea,
+select {
+    margin: 10px 0;
+    border: 1px solid #F1315E; /* Establece el color y el grosor del borde */
+    width: 100%;
+    min-height: 2em;
+    border-radius: 0.4em;
+}
+
+input::placeholder {
+    color: #7A7A7A; /* Color del marcador de posición */
+}
+
+textarea {
+    min-height: 100px; /* Altura mínima del textarea */
+    max-height: 200px; /* Altura máxima del textarea */
+    min-width: 200px; /* Ancho mínimo del textarea */
+    max-width: 100%; /* Ancho máximo del textarea */
+    resize: horizontal; /* Controla la dirección de redimensionamiento (puedes usar "horizontal", "vertical", o "both") */
+    box-sizing: border-box; /* Asegura que el tamaño total incluya el relleno y el borde */
+}
+
+
+.inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+}
+
+input[type="submit"]{
+    width: 100%;
+    border: 1px solid #00B87B; /* Establece el color y el grosor del borde */
+    background-color: #0BF2A5;
+    min-height: 40px;
+    border-radius: 0%;
+    color: #f5f6f7;
+    font-family:"Gill Sans", sans-serif;
+    font-size: 20px;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css" />
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to check this page</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label">Name<input id="name" type="text" 
+                placeholder="Enter your name" required/></label>
+            <!--El atributo "required" es para indicar que el campo es requerido-->
+            <label id="email-label">Email<input id="email" type="email" 
+                placeholder="Enter your Email" required/></label>
+            <label id="number-label">Age(optional)<input id="number" type="number" min="18" max="99"
+                placeholder="Age" /></label>
+        </fieldset>
+        <fieldset>
+            <label for="role">Which option best describes your current role?
+                <select id="dropdown"> <!--Despliega un menú de opciones-->
+                    <option>Select current role</option>
+                    <option>Student</option>
+                    <option>Full Time Job</option>
+                    <option>Full Time Learner</option>
+                    <option>Prefer not to say</option>
+                    <option>Other</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Would you recommend this course to a friend?</legend>
+            <!-- el atributo "name" se utiliza para agrupar opciones del mismo tipo-->
+            <label><input type="radio" name="attribute" value="attribute" class="inline"/>Definitely</label>
+            <label><input type="radio" name="attribute" value="attribute" class="inline"/>Maybe</label>
+            <label><input type="radio" name="attribute" value="attribute" class="inline"/>Not sure</label>
+        </fieldset>
+        <fieldset>
+            <label for="role">What activities do you enjoy the must during the curse?
+                <select id="dropdown">
+                    <option>Select an option</option>
+                    <option>Challenges</option>
+                    <option>Projects</option>
+                    <option>Teamwork</option>
+                    <option>Exams</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>What would you like to see during the curse? (Check all that apply)</legend>
+            <label><input type="checkbox" value="attribute" class="inline"/>More activities</label>
+            <label><input type="checkbox" value="attribute" class="inline"/>More Projects</label>
+            <label><input type="checkbox" value="attribute" class="inline"/>More Challenges</label>
+            <label><input type="checkbox" value="attribute" class="inline"/>Open Source Community</label>
+            <label><input type="checkbox" value="attribute" class="inline"/>Videos</label>
+            <label><input type="checkbox" value="attribute" class="inline"/>Forum</label>
+        </fieldset>
+        <fieldset>
+            <label>Any comments or suggestions?
+                <textarea placeholder="Enter your comment here..."></textarea>
+            </label>
+        </fieldset>
+        <input id ="submit" type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>
