@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #f5f6f7;
+  }
+  
+  .header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+  }
+  
+  .gallery {
+    display: flex; /* Los nodos hijo se pueden distribuir en dirección vertical u horizontal y se pueden "flexibilizar" sus tamaños */
+    flex-direction: row; /* Dirección en que se distribuyen los nodos */
+    flex-wrap: wrap; /* Especifica si los elementos "hijos" son obligados a permanecer en una misma línea o pueden fluir en varias líneas. */
+    justify-content: center;
+    align-items: center;
+    gap: 16px; /* Define el tamaño del espacio entre las filas y entre las columnas en flexbox, cuadrícula o diseño de varias columnas. */
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover; /* Indica cómo el contenido de un elemento debería redimensionarse para ajustarse a su contenedor. */
+    border-radius: 10px;
+  }
+  
+  .gallery::after { /*  Crea un pseudo-elemento que es el último hijo del elemento seleccionado. */
+    content: ""; /* Se usa junto con los pseudo-elementos :before y :after para generar contenido que se adjunta antes o después de un selector CSS. */
+    width: 350px;
+  }
+  
