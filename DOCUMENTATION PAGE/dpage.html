@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Básico</title>
+    <link rel="stylesheet" href="./dpage.css">
+</head>
+
+<body>
+    <div class="prin">
+        <nav id="navbar">
+            <header>
+                <h1>Introducción a CSS</h1>
+            </header>
+            <a class="nav-link" href="#CSS:Definición">CSS:Definición</a>
+            <a class="nav-link" href="#Anatomía_de_una_regla_CSS">Anatomía de una regla CSS</a>
+            <a class="nav-link" href="#Seleccionar_varios_elementos">Seleccionar varios elementos</a>
+            <a class="nav-link" href="#Diferentes_tipos_de_selectores">Diferentes tipos de selectores</a>
+            <a class="nav-link" href="#Boxes">Boxes</a>
+        </nav>
+        <div class="content">
+            <main id="main-doc">
+                <section class="main-section" id="CSS:Definición">
+                    <header>
+                        <h2>CSS:Definición</h2>
+                    </header>
+                    <p>
+                        CSS (Cascading Style Sheets) u Hojas de estilo en cascada en español,
+                        no es realmente un lenguaje de programación, tampoco es un lenguaje de
+                        marcado. Es un lenguaje de hojas de estilo, es decir, te permite aplicar
+                        estilos de manera selectiva a elementos en documentos HTML.
+                    </p>
+                    <p>
+                        El siguiente es un ejemplo de como seleccionar todos los elementos de
+                        párrafo en una página HTML y volver el texto dentro de ellos de color rojo.
+                    </p>
+                    <pre>
+                <code>
+                    p {
+                        color: red;
+                    }
+                </code>
+            </pre>
+                </section>
+                <section class="main-section" id="Anatomía_de_una_regla_CSS">
+                    <header>
+                        <h2>Anatomía de una regla CSS</h2>
+                    </header>
+                    <p>
+                        La estructura completa es llamada regla predeterminada (pero a menudo «regla» para abreviar).
+                    </p>
+                    <h3>Selector</h3>
+                    <p>
+                        El elemento HTML en el que comienza la regla. Esta selecciona el(los) elemento(s) a dar estilo
+                        (en este caso, los elementos <code>&lt;p&gt;</code>). Para dar estilo a un elemento diferente,
+                        solo
+                        cambia el selector.
+                    </p>
+                    <h3>Declaración</h3>
+                    <p>
+                        Una sola regla como <code>color: red;</code> especifica a cuál de las propiedades del elemento
+                        quieres
+                        dar estilo.
+                    </p>
+                    <h3>Propiedades</h3>
+                    <p>
+                        Maneras en las cuales puedes dar estilo a un elemento HTML. (En este caso, color es una
+                        propiedad
+                        del
+                        elemento
+                        <code>&lt;p&gt;</code>). En CSS, seleccionas qué propiedad quieres afectar en tu regla.
+                    </p>
+                    <h3>Valor de la propiedad</h3>
+                    <p>
+                        A la derecha de la propiedad, después de los dos puntos (:), tienes el valor de la propiedad,
+                        para
+                        elegir una de
+                        las muchas posibles apariencias para una propiedad determinada (hay muchos valores para
+                        <code>color</code> además de <code>red</code>).
+                    </p>
+                    <p>
+                        De este modo para modificar varios valores de propiedad a la vez, solo necesitas escribirlos
+                        separados
+                        por punto y coma (;), así:
+                    </p>
+                    <pre>
+                <code>
+                    p {
+                        color: red;
+                        width: 500px;
+                        border: 1px solid black;
+                      }
+                </code>
+            </pre>
+                </section>
+                <section class="main-section" id="Seleccionar_varios_elementos">
+                    <header>
+                        <h2>Seleccionar varios elementos</h2>
+                    </header>
+                    <p>
+                        También puedes seleccionar varios elementos y aplicar una sola regla a todos ellos. Incluye
+                        varios
+                        selectores separados por comas (,).
+                        Por ejemplo:
+                    </p>
+                    <pre>
+                <code>
+                    p, 
+                    li,
+                    h1 {
+                        color: red;
+                    }
+                </code>
+            </pre>
+                </section>
+                <section class="main-section" id="Diferentes_tipos_de_selectores">
+                    <header>
+                        <h2>Diferentes tipos de selectores</h2>
+                    </header>
+                    <p>
+                        Existen muchos tipos diferentes de selectores, los cuales seleccionan todos los elementos de un
+                        tipo
+                        de
+                        dato en los documentos HTML.
+                    </p>
+                    <ol>
+                        <li>Selector de elemento (llamado algunas veces selector de etiqueta o tipo)</li>
+                        <pre>
+                    <code>
+                        p, h1, main, section{
+
+                        }
+                    </code>
+                </pre>
+                        <li>Selector de identificación (ID)</li>
+                        <pre>
+                    <code>
+                        #mi-id
+                    </code>
+                </pre>
+                        <li>Selector de clase</li>
+                        <pre>
+                    <code>
+                        .mi-clase
+                    </code>
+                </pre>
+                        <li>Selector de atributo</li>
+                        <pre>
+                    <code>
+                        img[src]
+                    </code>
+                </pre>
+                        <li>Selector de pseudoclase</li>
+                        <pre>
+                    <code>
+                        a:hover
+                    </code>
+                </pre>
+                    </ol>
+                    <code></code>
+                </section>
+                <section class="main-section" id="Boxes">
+                    <header>
+                        <h2>Boxes</h2>
+                    </header>
+                    <p>
+                        Una cosa que notarás sobre la escritura de CSS es que trata mucho sobre cajas —ajustando su
+                        tamaño,
+                        color, posición, etc—. Puedes
+                        pensar en la mayoría de los elementos HTML de tu página como cajas apiladas una sobre la otra.
+                        Cada
+                        una
+                        de las cajas que ocupa
+                        espacio en tu página tiene propiedades como estas:
+                    </p>
+                    <ul>
+                        <li>
+                            <p>
+                                <code>padding</code> (relleno), el espacio alrededor del contenido.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>border</code> (marco), la línea que se encuentra fuera del relleno.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>margin</code> (margen), el espacio fuera del elemento que lo separa de los demás.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>width</code> (ancho del elemento)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>background-color</code> el color de fondo del contenido y del relleno.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>color</code> el color del contenido del elemento (generalmente texto).
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>text-shadow</code> coloca una sombra difuminada en el texto dentro del elemento.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <code>display</code> selecciona el modo de visualización para el elemento.
+                            </p>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
